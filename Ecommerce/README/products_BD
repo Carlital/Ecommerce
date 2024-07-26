@@ -1,0 +1,35 @@
+===Database tienda
+
+== Table structure for table producto
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Codigo**//|char(4)|No|
+|Categoria|varchar(50)|No|
+|Nombre|varchar(50)|No|
+|Marca|varchar(50)|No|
+|Precio_Coste|decimal(10,2)|No|
+|Precio_Venta|decimal(10,2)|No|
+|Color|varchar(50)|No|
+|Talla|varchar(50)|No|
+|Tipo_Cuello|varchar(50)|Yes|NULL
+|Stock|int(11)|No|
+|Imagen|varchar(255)|Yes|NULL
+|Genero|varchar(50)|Yes|NULL
+|Tipo|varchar(50)|Yes|NULL
+== Dumping data for table producto
+
+|C001|camisetas|Nike Dri-FIT|Nike|15.00|50.40|Rojo|M|Redondo|50|camiseta_roja.jpg|Hombre|Casual
+|C002|camisetas|Adidas Climalite|Adidas|12.00|25.00|Verde|L|V|20|../img/camiseta_verde.jpg|Hombre|Casual
+|C003|camisetas|Puma Essentials|Puma|10.00|20.00|Naranja|S|Redondo|30|../img/cam_naranja_casualH_R.jpg|Hombre|Casual
+|C004|camisetas|Under Armour HeatGear|Under Armour|18.00|35.00|Rojo|L|Polo|20|../img/cam_roja_casualH_Polo.jpg|Hombre|Casual
+|C005|camisetas|Reebok Workout Ready|Reebok|14.00|28.00|Negro|S|Redondo|25|../img/cam_negra_deportivaM_Red.jpg|Mujer|Deportivo
+|C006|camisetas|Nike Sportswear|Nike|17.00|34.00|Morado|L|V|20|../img/cam_morada_deportivaM_V.jpg|Mujer|Deportivo
+|C007|camisetas|Adidas Originals|Adidas|20.00|40.00|Rosa|S|Redondo|15|../img/cam_rosa_casualM_Red.jpg|Mujer|Casual
+|C008|camisetas|Adidas Originals|Adidas|20.00|40.00|Morado|M|V|15|../img/cam_morada_casualM_V.jpg|Mujer|Casual
+|C009|camisetas|Adidas Originals|Adidas|20.00|40.00|Verde|L|Polo|15|../img/polo_verdeM_casual.jpg|Mujer|Casual
+|P001|pantalones|Nike Dri-FIT|Nike|25.00|30.00|Blanco|30|V|20|../img/deportivo_blancoH.jpg|Hombre|Deportivo
+|P002|pantalones|Puma Essentials|Puma|15.00|20.00|Azul|26|V|20|../img/deportivo_azulM.jpg|Mujer|Deportivo
+|P003|pantalones|Reebok Workout Ready|Reebok|14.00|28.00|Negro|28|V|25|../img/leggin_negro.jpg|Mujer|Leggins
+|P004|pantalones|Adidas Originals|Adidas|20.00|40.00|Negro|32|V|10|../img/capri_negro.jpg|Mujer|Capris

@@ -1,0 +1,16 @@
+===Database tienda
+
+== Table structure for table cliente
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Cedula**//|char(10)|No|
+|Nombre|varchar(50)|No|
+|Apellido|varchar(50)|No|
+|Correo|varchar(50)|No|
+|Contrasena|varchar(255)|No|
+|Fecha_Nacimiento|date|No|
+== Dumping data for table cliente
+
+| |Admin| |admin@admin.com|admin123|0000-00-00

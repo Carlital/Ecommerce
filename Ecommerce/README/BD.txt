@@ -1,0 +1,56 @@
+CREATE DATABASE IF NOT EXISTS Tienda;
+USE Tienda;
+
+
+CREATE TABLE Cliente (
+    Cedula CHAR(10) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Correo VARCHAR(50) NOT NULL,
+    Contrasena VARCHAR(255) NOT NULL,
+    Fecha_Nacimiento DATE NOT NULL
+);
+
+
+CREATE TABLE Producto (
+    Codigo CHAR(4) PRIMARY KEY,
+    Categoria VARCHAR(50) NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Marca VARCHAR(50) NOT NULL,
+    Precio_Coste DECIMAL(10, 2) NOT NULL,
+    Precio_Venta DECIMAL(10, 2) NOT NULL,
+    Color VARCHAR(50) NOT NULL,
+    Talla VARCHAR(50) NOT NULL,
+    Tipo_Cuello VARCHAR(50),
+    Tipo VARCHAR(50),
+    Stock INT NOT NULL
+);
+
+
+CREATE TABLE Factura (
+    ID_Factura INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Cliente CHAR(10),
+    Fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Total DECIMAL(10, 2),
+    FOREIGN KEY (ID_Cliente) REFERENCES Cliente(Cedula)
+);
+
+
+CREATE TABLE Detalle_Factura (
+    ID_Detalle INT AUTO_INCREMENT PRIMARY KEY,
+    ID_Factura INT,
+    Cod_Prod CHAR(4),
+    Precio_Venta DECIMAL(10, 2),
+    Cantidad INT,
+    Subtotal DECIMAL(10, 2),
+    FOREIGN KEY (ID_Factura) REFERENCES Factura(ID_Factura),
+    FOREIGN KEY (Cod_Prod) REFERENCES Producto(Codigo)
+);
+CREATE TABLE Configuracion (
+    ID_Conf INT PRIMARY KEY,
+    Ganancia INT NOT NULL,
+    IVA INT NOT NULL,
+    Promocion INT NOT NULL
+);
+INSERT INTO Configuracion (ID_Conf, Ganancia, IVA, Promocion)
+VALUES (1, 50, 12, 30);

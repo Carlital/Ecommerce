@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <header>
+        <h1>Registrarse</h1>
+    </header>
+
+    <main>
+        <form action="../model/register.php" method="post" onsubmit="return validarFormulario()">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" maxlength="10" required
+                   pattern="\d{10}" title="La cédula debe tener 10 dígitos.">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required
+                   pattern="[a-zA-Z\s]+" title="El nombre solo debe contener letras y espacios.">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required
+                   pattern="[a-zA-Z\s]+" title="El apellido solo debe contener letras y espacios.">
+
+            <label for="genero">Género:</label>
+           <select id="genero" name="genero" required>
+                <option value="">Seleccione</option>
+               <option value="Hombre">Hombre</option>
+               <option value="Mujer">Mujer</option>
+           </select>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required
+                   title="Introduce una dirección de correo válida.">
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required minlength="6"
+                   title="La contraseña debe tener al menos 6 caracteres.">
+
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required
+                   min="1934-01-01" max="2006-01-01" title="Debes tener entre 18 y 90 años.">
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </main>
+    <script src="../js/validateCI.js" defer></script>
+    <script>
+        function validarFormulario() {
+            const correo = document.getElementById('correo').value;
+            if (correo === 'admin@admin.com') {
+                alert('El correo admin@admin.com no está permitido.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

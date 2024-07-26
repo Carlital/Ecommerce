@@ -1,0 +1,61 @@
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 18px;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    color: #fff;
+}
+main {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 370px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+form input, form select {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 120%;
+}
+form button {
+    margin-left: 40px;
+    width: 120%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+form button:hover {
+    background: #0056b3;
+}
